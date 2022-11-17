@@ -2,7 +2,33 @@
 
 
 /* VARIABLES ////////////////////////////////////// */
-:root {}
+:root {
+    --color-000: #fff;
+    --color-010: #F0F3F5;
+    --color-020: #e3e3e3;
+    --color-900: #282D37;
+    --color-999: #000;
+
+    --c-db-main: #EC0016;
+    --c-db-main-faded: #fbc3c8;
+
+    --c-btn-bg: var(--c-db-main);
+    --c-btn-bg-faded: var(--c-db-main-faded);
+    --c-line-bg: var(--color-020);
+    --c-text-main: var(--color-900);
+
+    --f-size-h1: 1.2rem;
+    --f-size-h2: 1.2rem;
+    --f-size-h3: 1.2rem;
+    --f-size-h4: 1.2rem;
+    --f-size-p-normal: 1.2rem;
+    --f-size-p-mini: 1.2rem;
+
+    --p-outer-document-sides: 10vw;
+    --p-outer-structure-y: 8vw;
+    --p-main-inner-normal: 2rem;
+    --p-main-inner-small: 1rem;
+}
 
 
 /* CSS RESET ////////////////////////////////////// */
