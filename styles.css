@@ -1,0 +1,74 @@
+/* FONTS ////////////////////////////////////// */
+
+
+/* VARIABLES ////////////////////////////////////// */
+:root {}
+
+
+/* CSS RESET ////////////////////////////////////// */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/** PAGE STRUCTURE ////////////////////////////////////// */
+body {}
+
+#wrapper {}
+
+
+/** GENERAL TEXT ELEMENTS ////////////////////////////////////// */
+h1,h2,h3,h4,h5,h6,p {}
+
+
+/** HEADER - SEARCH ////////////////////////////////////// */
+header.search {}
+
+.main-title {}
+
+span.db {}
+
+.btn-container {}
+
+button.primary {}
+
+button.primary:hover {}
+
+button.primary:active {}
+
+button.primary:disabled {}
+
+
+/** RESULTS AREA ////////////////////////////////////// */
+/* RESULTS - Structure ------------------------------- */
+.route-results-all {}
+
+
+
+/** ONE-RESULT -------------------------------------- */
+.one-result {}
+
+.route-point {}
+
+.route-point.origin {}
+
+.route-point.destination {}
+
+.route-duration {}
+
+.route-point .city-name {}
+
+.route-point .time {}
+
+div.circle {}
+
+div.line {}
+
+
+
