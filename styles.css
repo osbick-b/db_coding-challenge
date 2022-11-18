@@ -34,8 +34,8 @@
 
 	--p-outer-body-x: 10vw;
 	--p-outer-structure-y: 8vw;
-	--p-main-inner-normal: 2rem;
-	--p-main-inner-small: 1rem;
+	--p-main-inner-large: 2rem;
+	--p-main-inner-normal: 1rem;
     --p-inline-mini: 0.5rem;
 	--p-btn: 0.75rem;
 
@@ -69,7 +69,7 @@ body {
 }
 
 #app {
-	width: 100vw;
+	max-width: 100vw;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -81,7 +81,7 @@ body {
     width: var(--w-content-main);
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: flex-start;
 	gap: var(--p-outer-structure-y);
 }
 
@@ -99,6 +99,7 @@ p {
 
 /** HEADER - SEARCH ////////////////////////////////////// */
 header.search {
+    width: var(--w-content-main);
 }
 
 .main-title {
@@ -143,19 +144,46 @@ button.primary:disabled {
 /** RESULTS AREA ////////////////////////////////////// */
 /* RESULTS - Structure ------------------------------- */
 .route-results-all {
+    width: var(--w-content-main);
+    display: flex;
+    flex-direction: column;
+    gap: var(--p-main-inner-normal);
 }
 
 /** ONE-RESULT -------------------------------------- */
 .one-result {
+    width: var(--w-content-main);
+    border: 3px solid hotpink; /*!!! REMOVE - border test */
+    width: var(--w-content-main);
+    display: grid;
+    /* grid-template-columns: 1fr;
+    grid-template-rows: 1fr; */
+    grid-template-columns: 1fr 20vw 1fr;
+    grid-template-rows: 1fr 3px 1fr;
+    align-items: center;
+    gap: var(--p-inline-mini);
 }
 
-.route-point {
+div.line {
+    height: 3px;
+    width: var(--w-content-main);
+    background-color: var(--c-line);
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    align-self: center;
+    z-index: 10;
+    /* grid-row: 2/3; */
 }
 
-.route-point.origin {
-}
-
-.route-point.destination {
+.one-result-content {
+    width: var(--w-content-main);
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
 }
 
 .route-duration {
@@ -163,6 +191,22 @@ button.primary:disabled {
     font-weight: normal;
     font-style: normal;
     font-display: swap;
+}
+
+.route-point {
+    display: flex;
+    flex-direction: column;
+    gap: var(--p-inline-mini);
+}
+
+.route-point.origin {
+    grid-column: 1/2;
+    align-items: flex-start;
+}
+
+.route-point.destination {
+    grid-column: -1/-2;
+    align-items: flex-end;
 }
 
 .route-point .city-name {
@@ -183,11 +227,4 @@ div.circle {
     border: 2px solid var(--c-line);
     border-radius: 50%;
     background-color: var(--c-bg-main);
-}
-
-div.line {
-    height: 3px;
-    width: 10vw;
-    background-color: var(--c-line);
-    /* width: 100%; */
 }
