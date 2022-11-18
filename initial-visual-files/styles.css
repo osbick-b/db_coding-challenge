@@ -1,5 +1,5 @@
 /* FONTS ////////////////////////////////////// */
-@import url(fonts/fonts-stylesheet.css);
+@import url(../fonts/fonts-stylesheet.css);
 
 
 /* VARIABLES ////////////////////////////////////// */
@@ -124,7 +124,8 @@ span.db {
 button.primary {
     padding: var(--p-btn-y) var(--p-btn-x);
     background-color: var(--c-btn-bg);
-    border: var(--b-btn) solid var(--c-btn-bg);
+    border: var(--b-btn) solid;
+    border-color: var(--c-btn-bg);
     border-radius: var(--b-radius-btn);
     font-family: 'DB Screen Sans';
     font-weight: bold;
@@ -144,7 +145,8 @@ button.primary:active {
 }
 
 button.primary:disabled {
-    background-color: var(--c-db-main-faded);
+    background-color: var(--c-btn-bg-faded);
+    border-color: var(--c-btn-bg-faded);
 }
 
 /** RESULTS AREA ////////////////////////////////////// */
