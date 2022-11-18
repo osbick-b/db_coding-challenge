@@ -25,23 +25,24 @@
 	--f-size-title-main: 1.5rem;
 	--f-size-h2: 1.2rem;
 	--f-size-h3: 1rem;
-    --f-size-btn: 0.875rem;
-	--f-size-result-city-name: 1rem;
-	--f-size-result-time: 0.75rem;
-	--f-size-result-duration: 0.75rem;
+    --f-size-btn: 0.8rem;
+	--f-size-result-city-name: 1.1rem;
+	--f-size-result-time: 0.8rem;
+	--f-size-result-duration: 0.8rem;
 
     --w-content-main: 80vw;
+    --w-circle: 1rem;
 
 	--p-outer-body-x: 10vw;
 	--p-outer-structure-y: 8vw;
+	--p-inner-structure: 3rem;
 	--p-main-inner-large: 2rem;
 	--p-main-inner-normal: 1rem;
     --p-inline-mini: 0.5rem;
-	--p-btn: 0.75rem;
+	--p-btn-x: 0.75rem;
+	--p-btn-y: 0.5rem;
 
     --b-btn: 0.0625rem;
-
-    --w-circle: 1rem;
 
     --b-radius-btn: 0.25rem
 }
@@ -98,8 +99,11 @@ p {
 
 
 /** HEADER - SEARCH ////////////////////////////////////// */
-header.search {
+header.route-search {
     width: var(--w-content-main);
+    display: flex;
+    flex-direction: column;
+    gap: var(--p-inner-structure);
 }
 
 .main-title {
@@ -113,10 +117,12 @@ span.db {
 }
 
 .btn-container {
+    display: flex;
+    gap: var(--p-main-inner-normal);
 }
 
 button.primary {
-    padding: var(--p-btn);
+    padding: var(--p-btn-y) var(--p-btn-x);
     background-color: var(--c-btn-bg);
     border: var(--b-btn) solid var(--c-btn-bg);
     border-radius: var(--b-radius-btn);
@@ -147,7 +153,7 @@ button.primary:disabled {
     width: var(--w-content-main);
     display: flex;
     flex-direction: column;
-    gap: var(--p-main-inner-normal);
+    gap: var(--p-inner-structure);
 }
 
 /** ONE-RESULT -------------------------------------- */
@@ -160,6 +166,7 @@ button.primary:disabled {
 }
 
 .route-duration {
+    font-size: var(--f-size-result-duration);
     grid-column: 2/3;
     grid-row: 1/2;
     align-self: flex-end;
@@ -173,7 +180,8 @@ button.primary:disabled {
 .route-point {
     display: flex;
     flex-direction: column;
-    gap: var(--p-main-inner-large);
+    gap: 1.5rem;
+    /* gap: var(--p-main-inner-normal); */
 }
 
 .route-point.origin {
@@ -194,12 +202,14 @@ button.primary:disabled {
     font-family: 'DB Screen Sans';
     font-weight: bold;
     font-style: normal;
+    font-size: var(--f-size-result-city-name);
 }
 
 .route-point .time {
     font-family: 'DB Screen Sans';
     font-weight: bold;
     font-style: normal;
+    font-size: var(--f-size-result-time);
 }
 
 .line-circles-container {
@@ -211,7 +221,7 @@ button.primary:disabled {
 }
 
 div.line {
-    height: 3px;
+    height: 4px;
     width: 100%;
     background-color: var(--c-line);
 }
