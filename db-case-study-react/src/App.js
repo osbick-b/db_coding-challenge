@@ -26,8 +26,8 @@ setRoute(route) {
 		return (
 			<div id="app">
 				<div class="content">
-					<Header setRoute={this.setRoute} />
-					<SearchResults route={this.state.route} />
+					{/* <Header setRoute={this.setRoute} /> */}
+					{/* <SearchResults route={this.state.route} /> */}
 
 					<main class="route-results-all"></main>
 				</div>

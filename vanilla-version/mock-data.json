@@ -1,0 +1,56 @@
+[
+	{
+		"from": "Frankfurt(Main)Hbf",
+		"to": "Berlin Hbf",
+		"starttime": "09:40",
+		"endtime": "11:20"
+	},
+	{
+		"from": "Frankfurt(Main)Hbf",
+		"to": "Dresden Hbf",
+		"starttime": "09:40",
+		"endtime": "11:20"
+	},
+	{
+		"from": "Frankfurt(Main)Hbf",
+		"to": "Hamburg Hbf",
+		"starttime": "09:40",
+		"endtime": "11:20"
+	},
+	{
+		"from": "Frankfurt(Main)Hbf",
+		"to": "Wupperthal Hbf",
+		"starttime": "09:40",
+		"endtime": "11:20"
+	},
+	{
+		"from": "Frankfurt(Main)Hbf",
+		"to": "Köln Hbf",
+		"starttime": "09:40",
+		"endtime": "11:20"
+	},
+	{
+		"from": "Köln  Hbf",
+		"to": "Frankfurt(Main)Hbf",
+		"starttime": "09:40",
+		"endtime": "11:20"
+	},
+	{
+		"from": "Hamburg Hbf",
+		"to": "Frankfurt(Main)Hbf",
+		"starttime": "09:40",
+		"endtime": "11:20"
+	},
+    {
+		"from": "Dresden Hbf",
+		"to": "Frankfurt(Main)Hbf",
+		"starttime": "09:40",
+		"endtime": "11:20"
+	},
+    {
+		"from": "Berlin Hbf",
+		"to": "Frankfurt(Main)Hbf",
+		"starttime": "09:40",
+		"endtime": "11:20"
+	}
+]
