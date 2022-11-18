@@ -151,7 +151,7 @@ button.primary:disabled {
 
 /** RESULTS AREA ////////////////////////////////////// */
 /* RESULTS - Structure ------------------------------- */
-.route-results-all {
+.search-results-all {
     width: var(--w-content-main);
     display: flex;
     flex-direction: column;
