@@ -1,13 +1,239 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* FONTS ////////////////////////////////////// */
+@import url(fonts/fonts-stylesheet.css);
+
+
+/* VARIABLES ////////////////////////////////////// */
+:root {
+	--color-000: #fff;
+	--color-010: #f0f3f5;
+	--color-020: #e3e3e3;
+	--color-900: #282d37;
+	--color-999: #000;
+
+	--c-db-main: #ec0016;
+	--c-db-main-faded: #fbc3c8;
+	--c-db-main-darkened: #CB0012;
+
+    --c-bg-main: var(--color-000);
+	--c-btn-bg: var(--c-db-main);
+	--c-btn-bg-faded: var(--c-db-main-faded);
+	--c-btn-bg-hover: var(--c-db-main-darkened);
+	--c-btn-text: var(--color-000);
+	--c-line: var(--color-020);
+	--c-text-main: var(--color-900);
+
+	--f-size-title-main: 1.5rem;
+	--f-size-h2: 1.2rem;
+	--f-size-h3: 1rem;
+    --f-size-btn: 0.8rem;
+	--f-size-result-city-name: 1.1rem;
+	--f-size-result-time: 0.8rem;
+	--f-size-result-duration: 0.8rem;
+
+    --w-content-main: 80vw;
+    --w-circle: 1rem;
+
+	--p-outer-body-x: 10vw;
+	--p-outer-structure-y: 8vw;
+	--p-inner-structure: 3rem;
+	--p-main-inner-large: 2rem;
+	--p-main-inner-normal: 1rem;
+    --p-inline-mini: 0.5rem;
+	--p-btn-x: 0.75rem;
+	--p-btn-y: 0.5rem;
+
+    --b-btn: 0.0625rem;
+
+    --b-radius-btn: 0.25rem
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* CSS RESET ////////////////////////////////////// */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	border: none;
+}
+
+/** PAGE STRUCTURE ////////////////////////////////////// */
+body {
+	overflow-x: hidden;
+    background-color: var(--c-bg-main);
+    line-height: 1.5rem;
+}
+
+#app {
+	max-width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.content {
+    width: var(--w-content-main);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: var(--p-outer-structure-y);
+}
+
+/** GENERAL TEXT ELEMENTS ////////////////////////////////////// */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    color: var(--c-text-main);
+}
+
+
+/** HEADER - SEARCH ////////////////////////////////////// */
+header.route-search {
+    width: var(--w-content-main);
+    display: flex;
+    flex-direction: column;
+    gap: var(--p-inner-structure);
+}
+
+.main-title {
+    font-family: 'DB Screen Head';
+    font-size: var(--f-size-title-main);
+}
+
+span.db {
+    border-bottom: 3px solid var(--c-db-main);
+    padding-bottom: var(--p-inline-mini);
+}
+
+.btn-container {
+    display: flex;
+    gap: var(--p-main-inner-normal);
+}
+
+button.primary {
+    padding: var(--p-btn-y) var(--p-btn-x);
+    background-color: var(--c-btn-bg);
+    border: var(--b-btn) solid;
+    border-color: var(--c-btn-bg);
+    border-radius: var(--b-radius-btn);
+    font-family: 'DB Screen Sans';
+    font-weight: bold;
+    font-style: normal;
+    font-size: var(--f-size-btn);
+    color: var(--c-btn-text);
+}
+
+button.primary:hover {
+    background-color: var(--c-btn-bg-hover);
+    border: var(--b-btn) solid var(--c-btn-bg-hover);
+}
+
+button.primary:active {
+    background-color: var(--c-btn-bg);
+    border: var(--b-btn) solid var(--c-btn-bg);
+}
+
+button.primary:disabled {
+    background-color: var(--c-btn-bg-faded);
+    border-color: var(--c-btn-bg-faded);
+}
+
+/** RESULTS AREA ////////////////////////////////////// */
+/* RESULTS - Structure ------------------------------- */
+.route-results-all {
+    width: var(--w-content-main);
+    display: flex;
+    flex-direction: column;
+    gap: var(--p-inner-structure);
+}
+
+/** ONE-RESULT -------------------------------------- */
+.one-result {
+    width: var(--w-content-main);
+    display: grid;
+    grid-template-columns: 1fr 15vw 1fr;
+    grid-template-rows: 1fr 3px 1fr;
+    align-items: center;
+}
+
+.route-duration {
+    font-size: var(--f-size-result-duration);
+    grid-column: 2/3;
+    grid-row: 1/2;
+    align-self: flex-end;
+    justify-self: center;
+    font-family: 'DB Screen Sans';
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.route-point {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    /* gap: var(--p-main-inner-normal); */
+}
+
+.route-point.origin {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    align-self: center;
+    align-items: flex-start;
+}
+
+.route-point.destination {
+    grid-column: -1/-2;
+    grid-row: 1/-1;
+    align-self: center;
+    align-items: flex-end;
+}
+
+.route-point .city-name {
+    font-family: 'DB Screen Sans';
+    font-weight: bold;
+    font-style: normal;
+    font-size: var(--f-size-result-city-name);
+}
+
+.route-point .time {
+    font-family: 'DB Screen Sans';
+    font-weight: bold;
+    font-style: normal;
+    font-size: var(--f-size-result-time);
+}
+
+.line-circles-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+}
+
+div.line {
+    height: 4px;
+    width: 100%;
+    background-color: var(--c-line);
+}
+
+div.circle {
+    grid-row: 1/-1;
+    align-self: center;
+    width: var(--w-circle);
+    height: var(--w-circle);
+    border: 2px solid var(--c-line);
+    border-radius: 50%;
+    background-color: var(--c-bg-main);
 }
