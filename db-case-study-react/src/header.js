@@ -1,22 +1,26 @@
-import { Component } from "react";
+import { useState } from "react";
 
-export default class Header extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			from: "",
-			to: "",
-		};
+
+export default function Header ({setRoute}) {
+
+	// city is defined dynamically, to make it easily adaptable for search input
+let city = "Frankfurt"
+	const getRoutes = ({ target }) => {
+		console.log(`target.id`, target);
+		console.log(`setRoute(target)`, setRoute(target));
+		target.id === "TO" && console.log(target.value);;
+		// target.id === "TO" && setState(route: {to: target.value});
+		
+		const route = {}
 	}
 
-	searchRoute({ target }) {
-		console.log(`target.id`, target.id);
-        target.id === "TO" && this.setState({ from: "", to: target.value });
-        target.id === "FROM" && this.setState({ from: target.value, to: "" });
+		// setRoute(route);
+        // target.id === "TO" && this.setState({ from: "", to: target.value });
+        // target.id === "FROM" && this.setState({ from: target.value, to: "" });
         
-	}
+	
 
-	render() {
+
 		return (
 			<header className="route-search">
 				<h1 className="main-title">
@@ -26,21 +30,20 @@ export default class Header extends Component {
 					<button
 						className="primary"
 						id="FROM"
-						onClick={this.props.setRoute(this.value)}
-						value="Frankfurt"
+						onClick={getRoutes}
+						value={city}
 					>
-						von Frankfurt
+						von {city}
 					</button>
 					<button
 						className="primary"
 						id="TO"
-						onClick={this.props.setRoute(this.value)}
-						value="Frankfurt"
+						onClick={getRoutes}
+						value={city}
 					>
-						nach Frankfurt
+						nach {city}
 					</button>
 				</div>
 			</header>
 		);
 	}
-}

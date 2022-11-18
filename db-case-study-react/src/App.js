@@ -20,16 +20,17 @@ setRoute(route) {
   console.log(`setRoute`, route);
   this.setState({route: route});
   console.log(`this.state`, this.state);
+  return route;
 }
 
 	render() {
 		return (
 			<div id="app">
-				<div class="content">
-					{/* <Header setRoute={this.setRoute} /> */}
-					{/* <SearchResults route={this.state.route} /> */}
+				<div className="content">
+					<Header setRoute={this.setRoute} />
+					<SearchResults trips={this.state.route} />
 
-					<main class="route-results-all"></main>
+					<main className="route-results-all"></main>
 				</div>
 			</div>
 		);
