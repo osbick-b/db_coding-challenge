@@ -1,4 +1,6 @@
 /* FONTS ////////////////////////////////////// */
+@import url(fonts/fonts-stylesheet.css);
+
 
 /* VARIABLES ////////////////////////////////////// */
 :root {
@@ -10,18 +12,23 @@
 
 	--c-db-main: #ec0016;
 	--c-db-main-faded: #fbc3c8;
+	--c-db-main-darkened: #CB0012;
 
+    --c-bg-main: var(--color-000);
 	--c-btn-bg: var(--c-db-main);
 	--c-btn-bg-faded: var(--c-db-main-faded);
-	--c-line-bg: var(--color-020);
+	--c-btn-bg-hover: var(--c-db-main-darkened);
+	--c-btn-text: var(--color-000);
+	--c-line: var(--color-020);
 	--c-text-main: var(--color-900);
 
-	--f-size-h1: 1.2rem;
+	--f-size-title-main: 1.5rem;
 	--f-size-h2: 1.2rem;
-	--f-size-h3: 1.2rem;
-	--f-size-h4: 1.2rem;
-	--f-size-p-normal: 1.2rem;
-	--f-size-p-mini: 1.2rem;
+	--f-size-h3: 1rem;
+    --f-size-btn: 0.875rem;
+	--f-size-result-city-name: 1rem;
+	--f-size-result-time: 0.75rem;
+	--f-size-result-duration: 0.75rem;
 
     --w-content-main: 80vw;
 
@@ -29,7 +36,14 @@
 	--p-outer-structure-y: 8vw;
 	--p-main-inner-normal: 2rem;
 	--p-main-inner-small: 1rem;
-	--p-btn: 1rem;
+    --p-inline-mini: 0.5rem;
+	--p-btn: 0.75rem;
+
+    --b-btn: 0.0625rem;
+
+    --w-circle: 1rem;
+
+    --b-radius-btn: 0.25rem
 }
 
 /* CSS RESET ////////////////////////////////////// */
@@ -50,6 +64,8 @@ button {
 /** PAGE STRUCTURE ////////////////////////////////////// */
 body {
 	overflow-x: hidden;
+    background-color: var(--c-bg-main);
+    line-height: 1.5rem;
 }
 
 #app {
@@ -77,31 +93,51 @@ h4,
 h5,
 h6,
 p {
+    color: var(--c-text-main);
 }
+
 
 /** HEADER - SEARCH ////////////////////////////////////// */
 header.search {
 }
 
 .main-title {
+    font-family: 'DB Screen Head';
+    font-size: var(--f-size-title-main);
 }
 
 span.db {
+    border-bottom: 3px solid var(--c-db-main);
+    padding-bottom: var(--p-inline-mini);
 }
 
 .btn-container {
 }
 
 button.primary {
+    padding: var(--p-btn);
+    background-color: var(--c-btn-bg);
+    border: var(--b-btn) solid var(--c-btn-bg);
+    border-radius: var(--b-radius-btn);
+    font-family: 'DB Screen Sans';
+    font-weight: bold;
+    font-style: normal;
+    font-size: var(--f-size-btn);
+    color: var(--c-btn-text);
 }
 
 button.primary:hover {
+    background-color: var(--c-btn-bg-hover);
+    border: var(--b-btn) solid var(--c-btn-bg-hover);
 }
 
 button.primary:active {
+    background-color: var(--c-btn-bg);
+    border: var(--b-btn) solid var(--c-btn-bg);
 }
 
 button.primary:disabled {
+    background-color: var(--c-db-main-faded);
 }
 
 /** RESULTS AREA ////////////////////////////////////// */
@@ -123,16 +159,35 @@ button.primary:disabled {
 }
 
 .route-duration {
+    font-family: 'DB Screen Sans';
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 .route-point .city-name {
+    font-family: 'DB Screen Sans';
+    font-weight: bold;
+    font-style: normal;
 }
 
 .route-point .time {
+    font-family: 'DB Screen Sans';
+    font-weight: bold;
+    font-style: normal;
 }
 
 div.circle {
+    width: var(--w-circle);
+    height: var(--w-circle);
+    border: 2px solid var(--c-line);
+    border-radius: 50%;
+    background-color: var(--c-bg-main);
 }
 
 div.line {
+    height: 3px;
+    width: 10vw;
+    background-color: var(--c-line);
+    /* width: 100%; */
 }

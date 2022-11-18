@@ -1,0 +1,180 @@
+@font-face {
+    font-family: 'DB Screen Sans';
+    src: url('DBScreenSans-Medium.woff2') format('woff2'),
+        url('DBScreenSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DB Screen Head';
+    src: url('DBScreenHead-Light.woff2') format('woff2'),
+        url('DBScreenHead-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DB Screen Sans';
+    src: url('DBScreenSans-Regular.woff2') format('woff2'),
+        url('DBScreenSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DB Screen Sans';
+    src: url('DBScreenSans-Medium.woff2') format('woff2'),
+        url('DBScreenSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DB Screen Sans Cond';
+    src: url('DBScreenSansCond-Regular.woff2') format('woff2'),
+        url('DBScreenSansCond-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DB Screen Head';
+    src: url('DBScreenHead-Regular.woff2') format('woff2'),
+        url('DBScreenHead-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DB Screen Sans';
+    src: url('DBScreenSans-Bold.woff2') format('woff2'),
+        url('DBScreenSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DB Screen Head';
+    src: url('DBScreenHead-Light.woff2') format('woff2'),
+        url('DBScreenHead-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DB Screen Sans Cond';
+    src: url('DBScreenSansCond-Bold.woff2') format('woff2'),
+        url('DBScreenSansCond-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DB Screen Sans';
+    src: url('DBScreenSans-Bold.woff2') format('woff2'),
+        url('DBScreenSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DB Screen Head';
+    src: url('DBScreenHead-Black.woff2') format('woff2'),
+        url('DBScreenHead-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DB Screen Sans Digital';
+    src: url('DBScreenSans-DigitalRegular.woff2') format('woff2'),
+        url('DBScreenSans-DigitalRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DB Screen Sans';
+    src: url('DBScreenSans-SemiBold.woff2') format('woff2'),
+        url('DBScreenSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DB Screen Head';
+    src: url('DBScreenHead-Regular.woff2') format('woff2'),
+        url('DBScreenHead-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DB Screen Sans Digital';
+    src: url('DBScreenSans-DigitalRegular.woff2') format('woff2'),
+        url('DBScreenSans-DigitalRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DB Screen Sans';
+    src: url('DBScreenSans-Regular.woff2') format('woff2'),
+        url('DBScreenSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DB Screen Sans Cond';
+    src: url('DBScreenSansCond-Regular.woff2') format('woff2'),
+        url('DBScreenSansCond-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DB Screen Sans';
+    src: url('DBScreenSans-SemiBold.woff2') format('woff2'),
+        url('DBScreenSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DB Screen Head';
+    src: url('DBScreenHead-Black.woff2') format('woff2'),
+        url('DBScreenHead-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DB Screen Sans Cond';
+    src: url('DBScreenSansCond-Bold.woff2') format('woff2'),
+        url('DBScreenSansCond-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
